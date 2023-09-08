@@ -16,3 +16,6 @@ Bundler is a dependency management tool for Ruby which is available as a gem tha
 ## Conventions
 
 - partials: "\_partial_name.html.erb"
+
+to bring out all the routes:
+rails routes
