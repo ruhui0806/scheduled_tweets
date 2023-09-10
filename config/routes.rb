@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   # GET /about
   get 'about-us', to: 'about#index', as: :about
 
-
+  # POST /sign_up
+  get 'sign-up', to: 'registrations#new'
+  post 'sign-up', to: 'registrations#create'
 end
