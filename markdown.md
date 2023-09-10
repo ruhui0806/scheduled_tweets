@@ -13,9 +13,26 @@ Bundler is a dependency management tool for Ruby which is available as a gem tha
     gem install bundler
     bundle
 
+to bring out all the routes:
+
+    rails routes
+
+undo migration:
+
+    rails db:rollback
+
+and then run the migration again:
+
+    rails db:migrate
+
+if you want to combine the rollback and migration, run the following commands:
+
+    rails db:migrate:redo
+
+To check if there's any error in the db in the rails concole:
+
+    modelName.errors.first
+
 ## Conventions
 
 - partials: "\_partial_name.html.erb"
-
-to bring out all the routes:
-rails routes

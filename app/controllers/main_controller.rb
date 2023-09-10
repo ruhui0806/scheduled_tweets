@@ -4,4 +4,3 @@ class MainController < ApplicationController
     flash.now[:alert] = "Invalid email or password"
   end
 end
-
