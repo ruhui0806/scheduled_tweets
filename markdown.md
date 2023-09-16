@@ -13,6 +13,10 @@ Bundler is a dependency management tool for Ruby which is available as a gem tha
     gem install bundler
     bundle
 
+after adding a new gem to tge Gemfile, you need you install the gem using bundle:
+
+    bundle install
+
 to bring out all the routes:
 
     rails routes
@@ -32,6 +36,23 @@ if you want to combine the rollback and migration, run the following commands:
 To check if there's any error in the db in the rails concole:
 
     modelName.errors.first
+
+## Flash:
+
+    flash[:alert] = "Oops, something went wrong!" # can comment out and use form's alert instead
+
+## render the user params
+
+    params
+    # => {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"123@qwe.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+    render plain params[:user]
+    #=> only render the user params
+
+## turbor
+
+Now turbo drive is a default part of rails 7. Turbo drive is a tool that handles the link clicks and form submissions. sending request to the server and updating just a portion of the page, instead of reloading the full page as before. Besides, it doesnt know how to handle error reponses. Therefore there is no error messages pop out. To solve this problem, just disable the turbo from the form by adding:
+
+    data: {turbo: "false"}
 
 ## Conventions
 
