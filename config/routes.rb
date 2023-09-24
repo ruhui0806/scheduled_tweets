@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # GET /about
   get 'about-us', to: 'about#index', as: :about
 
+  get 'password', to: 'passwords#edit', as: :edit_password # display edit form for existing record.
+  patch 'password', to: 'passwords#update' # save changes for existing record
+
   get 'sign-up', to: 'registrations#new'
   post 'sign-up', to: 'registrations#create'
 
