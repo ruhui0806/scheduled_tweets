@@ -57,3 +57,22 @@ Now turbo drive is a default part of rails 7. Turbo drive is a tool that handles
 ## Conventions
 
 - partials: "\_partial_name.html.erb"
+
+find VS find_by
+
+    @user = User.find(session[:user_id])
+
+If no result is found, "find()" will cause en error
+
+    @user = User.find_by(id: session[:user_id])
+
+However, find_by will not cause en error even if not user is found
+
+Logout methods
+method 1:
+
+    <%= link_to"logout",logout_path, method: :delete %>
+
+method 2:
+
+    <%= button_to"logout",logout_path, method: :delete %>
