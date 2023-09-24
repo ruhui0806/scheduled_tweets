@@ -1,9 +1,9 @@
 class RegistrationsController < ApplicationController
-  def new
+  def new # display the form for new record
     @user = User.new
   end
 
-  def create
+  def create # save the new record
     @user = User.new(user_params) 
 
     if @user.save
